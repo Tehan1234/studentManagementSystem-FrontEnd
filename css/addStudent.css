@@ -1,0 +1,81 @@
+/* General body styling */
+body {
+    font-family: Arial, sans-serif;
+    margin: 0;
+    padding: 0;
+    background-color: #f0f0f5; /* Light background for contrast */
+  }
+  
+  /* Form container styling */
+  #addstudentcontent {
+    background-color: #3b5998; /* Colorful background (blueish) */
+    border-radius: 15px;
+    padding: 20px;
+    width: 50%;
+    margin: 20px auto;
+    box-shadow: 0 8px 16px rgba(0, 0, 0, 0.2); /* Shadow for a lifted look */
+  }
+  
+  /* Heading styling */
+  #addstudentcontent h3 {
+    color: #fff;
+    font-weight: bold;
+    text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.3);
+  }
+  
+  /* Input fields */
+  #addstudentcontent .form-control {
+    background-color: #eef2ff; /* Light blue input background */
+    border: 1px solid #ced4da;
+    border-radius: 5px;
+    padding: 10px;
+    transition: background-color 0.3s ease;
+  }
+  
+  #addstudentcontent .form-control:focus {
+    background-color: #d0e0ff; /* Slightly darker on focus */
+    outline: none;
+    border-color: #4a90e2; /* Blue border on focus */
+  }
+  
+  /* Labels */
+  #addstudentcontent .form-label {
+    color: #ffeb3b; /* Bright yellow labels */
+    font-weight: bold;
+  }
+  
+  /* Buttons */
+  .btnclear, .btnadd,.btnhome {
+    background-color: #ff5722; /* Vibrant orange */
+    color: #fff;
+    border: none;
+    padding: 10px 20px;
+    border-radius: 5px;
+    cursor: pointer;
+    margin-left: 10px;
+    transition: background-color 0.3s ease;
+  }
+  
+  .btnclear:hover, .btnadd:hover, .btnhome {
+    background-color: #e64a19; /* Darker orange on hover */
+  }
+  
+  .btnadd ,.btnhome {
+    background-color: #4caf50; /* Green color for the add button */
+  }
+
+  .btnhome{
+    background-color: #ffeb3b;
+  }
+  
+  .btnadd:hover {
+    background-color: #388e3c; /* Darker green on hover */
+  }
+  
+  /* Adjustments for mobile responsiveness */
+  @media (max-width: 768px) {
+    #addstudentcontent {
+      width: 90%;
+    }
+  }
+  

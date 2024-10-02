@@ -1,0 +1,109 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Delete Student Form</title>
+    <link rel="stylesheet" href="css/common.css">
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet"
+        integrity="sha384-QWTKZyjpPEjISv5WaRU9OFeRpok6YctnYmDr5pNlyT2bRjXh0JMhjY6hW+ALEwIH" crossorigin="anonymous">
+</head>
+
+<body>
+    <div id="commoncontent" class="subcontent">
+        <h3 class="text-white text-center fw-bold">Delete Student Form</h3>
+        <div class="row">
+            <div class="col-sm">
+                <input type="text" class="form-control-sm rounded-2 py-2" id="txtdeletesearch" onchange="deletesearch()"
+                    placeholder="Search Student By Id" />
+                <input type="button" value="Search" class="btn btn-primary" onclick="deletesearch()" />
+            </div>
+        </div>
+        <div class="row g-3 mb-3">
+            <div class="col">
+                <label for="txtdeletefname" class="form-label text-white">First Name</label>
+                <input type="text" class="form-control" placeholder="First name" aria-label="First name"
+                    id="txtdeletefname" />
+            </div>
+            <div class="col">
+                <label for="txtdeletelname" class="form-label text-white">Last Name</label>
+                <input type="text" class="form-control" placeholder="Last name" aria-label="Last name"
+                    id="txtdeletelname" />
+            </div>
+        </div>
+        <div class="row g-3 mb-3">
+            <div class="col-sm">
+                <label for="txtdeleteage" class="form-label text-white">Age</label>
+                <input type="text" class="form-control" placeholder="Age" aria-label="State" id="txtdeleteage" />
+            </div>
+            <div class="col-sm">
+                <label for="txtdeletegrade" class="form-label text-white">Grade</label>
+                <input type="text" class="form-control" placeholder="Grade" aria-label="Zip" id="txtdeletegrade" />
+            </div>
+            <div class="col-sm-7">
+                <label for="txtdeleteemail" class="form-label text-white">Email</label>
+                <input type="email" class="form-control" placeholder="Email" aria-label="Email" id="txtdeleteemail" />
+            </div>
+        </div>
+        <div class="row">
+            <div class="col-sm">
+                <label for="txtdeleteaddress" class="form-label text-white">Permenent Address</label>
+                <textarea name="studentaddress" id="txtdeleteaddress" rows="2" class="form-control"
+                    placeholder="Permenent Address"></textarea>
+            </div>
+        </div>
+        <div class="row">
+            <div class="col-sm mb-3">
+                <label for="txtdeletecontact" class="form-label text-white mt-3">Phone Number</label>
+                <input type="text" class="form-control-sm rounded-2 py-2 d-block" id="txtdeletecontact"
+                    placeholder="Phone Number" aria-label="Phone Number" />
+            </div>
+        </div>
+        <div class="row">
+            <div class="col">
+                <label for="txtdeleteimage" class="form-label text-white">Current Image</label>
+                <img src="" alt="" id="deletecurrentstudent" style="height: 100px; width: 100px" />
+            </div>
+        </div>
+        <div class="row">
+            <div class="col-sm d-flex justify-content-end">
+                <!-- <input type="button" value="Clear Form" class="p-2 text-white fw-bolder rounded-2 btnclear"
+                        onclick="clearaddform()"> -->
+                <button type="button" id="home-button" class="p-2 text-white fw-bolder rounded-2 btnhome"
+                    onclick="goToHome()">Home</button>
+
+                <input type="button" value="Delete Student" class="p-2 text-white fw-bolder rounded-2 btndelete"
+                    onclick="deletestudent()" />
+            </div>
+        </div>
+    </div>
+
+    <h3 class="text-black text-center fw-bold">Student List</h3>
+    <table id="studentTable" class="table table-bordered">
+        <thead>
+            <tr>
+                <th>Student ID</th>
+                <th>First Name</th>
+                <th>Last Name</th>
+                <th>Age</th>
+                <th>Grade</th>
+                <th>Email</th>
+                <th>Address</th>
+                <th>Phone</th>
+            </tr>
+        </thead>
+        <tbody id="tablebody">
+            <!-- Data from the server will be added here dynamically -->
+        </tbody>
+    </table>
+
+
+    <script src="app.js"></script>
+
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"
+        integrity="sha384-YvpcrYf0tY3lHB60NNkmXc5s9fDVZLESaAA55NDzOxhy9GkcIdslK1eN7N6jIeHz"
+        crossorigin="anonymous"></script>
+</body>
+
+</html>
