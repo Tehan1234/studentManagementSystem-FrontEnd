@@ -249,10 +249,16 @@ function updatestudent() {
       grade: grade
   })], { type: "application/json" }));
 
-  if (image !== undefined) {
-      formData.append("image", image);
+  if (image) {
+    formData.append("image", image);  // Append the new image file
   } else {
-      formData.append("image", JSON.parse(localStorage.getItem("currentimage")));
+    const currentImage = localStorage.getItem("currentimage");
+    if (currentImage) {
+      formData.append("image", currentImage); // Append image from localStorage (if exists)
+    } else {
+      console.warn("No image provided or found in localStorage.");
+      alert("No image provided or found in localStorage.")
+    }
   }
 
 
@@ -266,13 +272,11 @@ function updatestudent() {
       .then((response) => response.text())
       .then((result) => {
           console.log(result);
-          alert("update Student successfully successfully!"); 
           loadtable();
           localStorage.clear();
       })
       .catch((error) => console.error(error));
 }
-
 
 //try to catch the table click event 
 

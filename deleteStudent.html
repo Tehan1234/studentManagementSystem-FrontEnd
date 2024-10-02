@@ -98,6 +98,80 @@
         </tbody>
     </table>
 
+    <div class="modal" id="exampleModal" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
+        <div class="modal-dialog modal-dialog-centered modal-lg">
+            <div class="modal-content modelheadercolour">
+                <div class="modal-header">
+                    <h1 class="modal-title fs-5 title" id="exampleModalLabel">
+                        Student Details
+                    </h1>
+                    <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+                </div>
+                <div class="modal-body modelbodycolour">
+                    <div class="container-fluid">
+                        <div class="row d-flex justify-content-center mb-2">
+                            <img src=" " alt="" id="studentpic" style="width: 150px; height: 150px" />
+                        </div>
+                        <div class="row">
+                            <div class="col-4">
+                                <label for="studentid" class="form-label text-black fw-bolder">Student ID:-</label>
+                                <input type="number" readonly class="form-control fw-bold" id="studentid" />
+                            </div>
+                        </div>
+                        <div class="row g-3 mb-3">
+                            <div class="col">
+                                <label for="studentfname" class="form-label text-black fw-bolder">First Name</label>
+                                <input type="text" class="form-control fw-bold" placeholder="First name"
+                                    aria-label="First name" id="studentfname" readonly />
+                            </div>
+                            <div class="col">
+                                <label for="studentlname" class="form-label text-black fw-bolder">Last Name</label>
+                                <input type="text" class="form-control fw-bold" placeholder="Last name"
+                                    aria-label="Last name" id="studentlname" readonly />
+                            </div>
+                        </div>
+                        <div class="row g-3 mb-3">
+                            <div class="col-sm">
+                                <label for="studentage" class="form-label text-black fw-bolder">Age</label>
+                                <input type="text" class="form-control fw-bold" placeholder="Age" aria-label="State"
+                                    id="studentage" />
+                            </div>
+                            <div class="col-sm">
+                                <label for="studentgrade" class="form-label text-black fw-bolder">Grade</label>
+                                <input type="text" class="form-control fw-bold" placeholder="Grade" aria-label="Zip"
+                                    id="studentgrade" />
+                            </div>
+                            <div class="col-sm-7">
+                                <label for="studentemail" class="form-label text-black fw-bolder">Email</label>
+                                <input type="email" class="form-control fw-bold" placeholder="Email" aria-label="Email"
+                                    id="studentemail" />
+                            </div>
+                        </div>
+                        <div class="row">
+                            <div class="col-sm mb-3">
+                                <label for="studentphone" class="form-label text-black fw-bolder">Phone
+                                    Number</label>
+                                <input type="text" class="form-control fw-bolder" id="studentphone"
+                                    placeholder="Phone Number" aria-label="Phone Number" />
+                            </div>
+                            <div class="col-sm-7 mb-3">
+                                <label for="studentaddress" class="form-label text-black fw-bolder">Permenent
+                                    Address</label>
+                                <textarea name="studentaddress" id="studentaddress" rows="2"
+                                    class="form-control fw-bold" placeholder="Permenent Address"></textarea>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="modal-footer">
+                    <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">
+                        Close
+                    </button>
+                </div>
+            </div>
+        </div>
+    </div>
+
 
     <script src="app.js"></script>
 
