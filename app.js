@@ -90,7 +90,7 @@ function loadtable() {
     .then(data => {
       console.log(data);
       data.forEach(element => {
-        body += `<tr>
+       body += `<tr data-bs-toggle="modal" data-bs-target="#exampleModal" onclick="getdetails(${element.id})">
                   <td>${element.id}</td>
                   <td>${element.fname}</td>
                   <td>${element.lname}</td>
@@ -266,11 +266,46 @@ function updatestudent() {
       .then((response) => response.text())
       .then((result) => {
           console.log(result);
+          alert("update Student successfully successfully!"); 
           loadtable();
           localStorage.clear();
       })
       .catch((error) => console.error(error));
 }
+
+
+//try to catch the table click event 
+
+function getdetails(id) {
+  let studentid = document.getElementById("studentid");
+  let studentfname = document.getElementById("studentfname");
+  let studentlname = document.getElementById("studentlname");
+  let studentage = document.getElementById("studentage");
+  let studentaddress = document.getElementById("studentaddress");
+  let studentphone = document.getElementById("studentphone");
+  let studentemail = document.getElementById("studentemail");
+  let studentgrade = document.getElementById("studentgrade");
+  let studentpic = document.getElementById("studentpic");
+  fetch(`http://localhost:8080/student/searchById/${id}`)
+      .then(res => res.json())
+      .then(data => {
+          console.log(data);
+
+          studentid.value = data.id;
+          studentfname.value = data.fname;
+          studentlname.value = data.lname;
+          studentage.value = data.age;
+          studentaddress.value = data.address;
+          studentphone.value = data.phone;
+          studentemail.value = data.email;
+          studentgrade.value = data.grade;
+          studentpic.src = "data:image/*;base64," + data.image;
+      })
+      .catch(error => console.error('Error:',error));
+}
+
+
+
 
 
 
